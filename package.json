@@ -1,0 +1,33 @@
+{
+  "name": "telegraminformeryandex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "rollup --bundleConfigAsCjs -c rollup.config.js",
+    "dev": "rollup -w --bundleConfigAsCjs -c rollup.config.js",
+    "test": "node -r dotenv/config -e \"const t=require('./dist/index.js');const f=r=>{console.log(r);process.exit(0)};t.handler().then(f).catch(f);\"",
+    "deploy": "bash ./scripts/deploy.sh"
+  },
+  "keywords": [],
+  "author": "Vitaly Knox",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.11.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.2",
+    "prettier": "^3.2.4",
+    "rollup": "^4.9.6",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@yandex-cloud/nodejs-sdk": "latest",
+    "telegraf": "^4.15.3",
+    "ydb-sdk": "^5.1.1"
+  }
+}

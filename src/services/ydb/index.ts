@@ -1,1 +1,0 @@
-export { ConnectToYaBase } from "./base";

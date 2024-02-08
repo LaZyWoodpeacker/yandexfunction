@@ -1,4 +1,4 @@
-export namespace YaBot {
+export namespace YaFunction {
   export interface IResponse {
     statusCode: number;
     headers?: { [id: string]: string };
@@ -67,24 +67,4 @@ export namespace YaBot {
     getRemainingTimeInMillis: () => number; // возвращает время, оставшееся на выполнение текущего запроса в миллисекундах;
     getPayload: () => string; // возвращает тело запроса, если используется HTTP-интеграция. По умолчанию HTTP-интеграция используется для всех вызовов функции, если не указан параметр integration=raw
   }
-}
-
-interface IClone {
-  timestamp: string;
-  count: number;
-  uniques: number;
-}
-
-interface IClones {
-  count: number;
-  uniques: number;
-  clones: IClone[];
-}
-
-interface IConfig {
-  id: string;
-  chatid: string;
-  clones: IClones[];
-  hash: string;
-  project: string;
 }
